@@ -1,0 +1,157 @@
+<% layout('layouts/boilerplate') %>
+<title>Order Label - <%= name %></title>
+
+<!-- BEGIN: Content-->
+<div class="app-content content ">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper container-xxl p-0">
+        <div class="content-header row">
+            <div class="content-header-center col-md-9 col-12 mb-2">
+                <div class="row breadcrumbs-top">
+                    <div class="col-12">
+                        <h1 class="float-center mb-0">Order a Label</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="content-body">
+            <!-- Validation -->
+            <section class="bs-validation">
+                <form action="/order-labels" method="POST">
+                    <div class="row">
+                        <div class="mb-1">
+                            <label class="form-label" for="key">Your Label Supply Authentication API Key (You can get
+                                if
+                                from <a href="https://labelsupply.io/docs#authentication">here</a>)</label>
+                            <input type="text" class="form-control" id="key" name="key"
+                                placeholder="fdab30ec-e12c-7389-446b-c6868956c282" required />
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label" for="Type">Package Type ID (Right now we are only accepting USPS
+                                Priority V4)</label>
+                            <input type="text" class="form-control" id="Type" name="Type"
+                                value="e231706d-3613-41f3-831f-d50a75cd474a" required />
+                        </div>
+                        <div class="mb-1">
+                            <label class="form-label" for="Wright">Weight in lb</label>
+                            <input type="number" class="form-control" id="Weight" name="Weight" placeholder="20" />
+                        </div>
+                        <!-- From Validation -->
+                        <div class="col-md-6 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">From Address</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-1">
+                                        <label class="form-label" for="FromCountry">Country *Do not Change*</label>
+                                        <input type="text" class="form-control" id="FromCountry" name="FromCountry"
+                                            value="US" required />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="FromName">Name</label>
+                                        <input type="text" class="form-control" id="FromName" name="FromName"
+                                            placeholder="Kareev Kawnine" required />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="FromStreet">Street</label>
+                                        <input type="text" class="form-control" id="FromStreet" name="FromStreet"
+                                            required />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="FromCity">City</label>
+                                        <input type="text" class="form-control" id="FromCity" name="FromCity"
+                                            required />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="FromState">State</label>
+                                        <input type="text" class="form-control" id="FromState" name="FromState"
+                                            required />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="FromZip">Zip</label>
+                                        <input type="number" class="form-control" id="FromZip" name="FromZip"
+                                            placeholder="1001" required />
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- From Validation -->
+
+
+                        <!-- To Validation -->
+                        <div class="col-md-6 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">To Address</h4>
+                                </div>
+                                <div class="card-body">
+
+
+                                    <div class="mb-1">
+                                        <label class="form-label" for="ToCountry">Country *Do not Change*</label>
+                                        <input type="text" class="form-control" id="ToCountry" name="ToCountry"
+                                            value="US" required />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="ToName">Name</label>
+                                        <input type="text" class="form-control" id="ToName" name="ToName"
+                                            placeholder="Jasonare" required />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="ToStreet">Street</label>
+                                        <input type="text" class="form-control" id="ToStreet" name="ToStreet"
+                                            required />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="ToCity">City</label>
+                                        <input type="text" class="form-control" id="ToCity" name="ToCity" required />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="ToState">State</label>
+                                        <input type="text" class="form-control" id="ToState" name="ToState" required />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="ToZip">Zip</label>
+                                        <input type="number" class="form-control" id="ToZip" name="ToZip"
+                                            placeholder="1001" required />
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- To Validation -->
+
+                    </div>
+
+                    <button type="submitrequired" class="btn btn-primary waves-effect waves-float waves-light">Confirm
+                        Order</button>
+
+                </form>
+            </section>
+            <!-- /Validation -->
+
+        </div>
+    </div>
+</div>
+<!-- END: Content-->
+
+
+
+
+
+
+
+
+
+
+
+<div class="sidenav-overlay"></div>
+<div class="drag-target"></div>
